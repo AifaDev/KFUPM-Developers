@@ -10,12 +10,10 @@ export default function Card({
   link,
 }) {
   return (
-    <Template>
+    <Template onClick={() => window.open(link, "_blank").focus()}>
       <div id="flex-line">
         <h4>{name}</h4>
-        <a href={link} target="_blank" rel="noopener noreferrer">
-          <img src={redirect} alt="redirect" />
-        </a>
+        <img src={redirect} alt="redirect" />
       </div>
       <div id="info">
         <div>
@@ -40,8 +38,9 @@ export default function Card({
 }
 
 const Template = styled.div`
+  cursor: pointer;
   width: 100%;
-  border: 1px solid #e1e4e8;
+  box-shadow: inset 0 0 0 1px #e1e4e8;
   background-color: #f5f7fa;
   border-radius: 0.3rem;
   padding: 1.5rem;
@@ -52,13 +51,11 @@ const Template = styled.div`
   #flex-line {
     display: flex;
     justify-content: space-between;
-    a {
+    img {
+      opacity: 50%;
       margin-right: 0.5rem;
-      text-decoration: none;
-      img {
-        height: 1rem;
-        width: 1rem;
-      }
+      height: 1rem;
+      width: 1rem;
     }
   }
 
@@ -81,5 +78,13 @@ const Template = styled.div`
   }
   .green {
     color: green;
+  }
+  &:hover {
+    box-shadow: inset 0 0 0 2px #e1e4e8;
+    #flex-line {
+      img {
+        opacity: 80%;
+      }
+    }
   }
 `;

@@ -1,8 +1,9 @@
+import styled from "styled-components";
 import Card from "../Components/Card";
 
 export default function Competitions() {
   return (
-    <>
+    <Cards>
       <Card
         name="Web Dev competition #1"
         startingDate="20 June"
@@ -11,6 +12,12 @@ export default function Competitions() {
         status="Ongoing"
         link="https://google.com"
       />
-    </>
+    </Cards>
   );
 }
+
+const Cards = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+`;
