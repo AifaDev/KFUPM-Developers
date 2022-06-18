@@ -7,8 +7,9 @@ export default function Competitions() {
         name="Web Dev competition #1"
         startingDate="20 June"
         theme="To Be Announced"
-        Deadline="27 June"
+        deadline="27 June"
         status="Ongoing"
+        link="https://google.com"
       />
     </>
   );

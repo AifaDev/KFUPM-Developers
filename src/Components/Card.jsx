@@ -1,9 +1,22 @@
 import styled from "styled-components";
+import redirect from "../assets/arrow-up-right-from-square-solid.svg";
 
-export default function Card({ name, theme, startingDate, Deadline, status }) {
+export default function Card({
+  name,
+  theme,
+  startingDate,
+  deadline,
+  status,
+  link,
+}) {
   return (
     <Template>
-      <h4>{name}</h4>
+      <div id="flex-line">
+        <h4>{name}</h4>
+        <a href={link} target="_blank" rel="noopener noreferrer">
+          <img src={redirect} alt="redirect" />
+        </a>
+      </div>
       <div id="info">
         <div>
           <h5>Theme:</h5>
@@ -15,7 +28,7 @@ export default function Card({ name, theme, startingDate, Deadline, status }) {
         </div>
         <div>
           <h5>Deadline:</h5>
-          <p>{Deadline}</p>
+          <p>{deadline}</p>
         </div>
         <div>
           <h5>Status:</h5>
@@ -32,16 +45,27 @@ const Template = styled.div`
   background-color: #f5f7fa;
   border-radius: 0.3rem;
   padding: 1.5rem;
-  display: grid;
-  gap: 5px;
 
   h4 {
     margin-bottom: 1rem;
+  }
+  #flex-line {
+    display: flex;
+    justify-content: space-between;
+    a {
+      margin-right: 0.5rem;
+      text-decoration: none;
+      img {
+        height: 1rem;
+        width: 1rem;
+      }
+    }
   }
 
   #info {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
   }
 
   @media (max-width: 800px) {
