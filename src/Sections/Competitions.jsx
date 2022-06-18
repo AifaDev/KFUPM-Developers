@@ -5,7 +5,7 @@ export default function Competitions() {
   return (
     <Cards>
       <Card
-        name="Web Dev competition #1"
+        name="Web Dev Competition #1"
         startingDate="20 June"
         theme="To Be Announced"
         deadline="27 June"

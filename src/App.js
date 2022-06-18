@@ -16,15 +16,15 @@ function App() {
   return (
     <div className="App">
       <Container>
-        {" "}
         <div id="title">
           <img src={logo} alt="logo" />
           <h3>KFUPM Developers</h3>
         </div>
         <div id="tabs">
-          {tabs.map((e) => {
+          {tabs.map((e, index) => {
             return (
               <button
+                key={index}
                 className={`tab ${selectedTab === e ? "selected" : ""}`}
                 onClick={() => setSelectedTab(e)}
               >
@@ -79,7 +79,8 @@ const Container = styled.div`
       cursor: pointer;
       width: 25%;
       height: 100%;
-
+      text-align: center;
+      font-size: 0.7rem;
       span {
         opacity: 40%;
       }
@@ -101,5 +102,11 @@ const Container = styled.div`
     height: 100%;
     width: 100%;
     padding: 2rem;
+  }
+
+  @media (max-width: 430px) {
+    .tab {
+      word-spacing: 100vw;
+    }
   }
 `;

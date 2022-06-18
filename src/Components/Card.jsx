@@ -16,15 +16,15 @@ export default function Card({
         <img src={redirect} alt="redirect" />
       </div>
       <div id="info">
-        <div>
+        <div className="margin-bottom">
           <h5>Theme:</h5>
           <p>{theme}</p>
         </div>
-        <div>
+        <div className="margin-bottom">
           <h5>Starting Date:</h5>
           <p>{startingDate}</p>
         </div>
-        <div>
+        <div className="margin-bottom">
           <h5>Deadline:</h5>
           <p>{deadline}</p>
         </div>
@@ -58,6 +58,12 @@ const Template = styled.div`
       width: 1rem;
     }
   }
+  h5 {
+    font-size: 0.87em;
+  }
+  p {
+    font-size: 0.9em;
+  }
 
   #info {
     display: grid;
@@ -86,5 +92,8 @@ const Template = styled.div`
         opacity: 80%;
       }
     }
+  }
+  .margin-bottom {
+    margin-bottom: 0.5rem;
   }
 `;

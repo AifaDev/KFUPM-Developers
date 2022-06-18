@@ -2,6 +2,7 @@ import About from "../Sections/About";
 import Competitions from "../Sections/Competitions";
 import Participations from "../Sections/Participations";
 import Projects from "../Sections/Projects";
+import Welcome from "../Sections/Welcome";
 
 export default function Sections({ selectedTab }) {
   if (selectedTab === "Competitions 🎮") {
@@ -13,6 +14,6 @@ export default function Sections({ selectedTab }) {
   } else if (selectedTab === "About ❤️") {
     return <About />;
   } else {
-    return <h1>Welcome</h1>;
+    return <Welcome />;
   }
 }
