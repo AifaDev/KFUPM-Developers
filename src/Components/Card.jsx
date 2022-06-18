@@ -4,7 +4,7 @@ export default function Card({ name, theme, startingDate, Deadline, status }) {
   return (
     <Template>
       <h4>{name}</h4>
-      <div class="content">
+      <div id="info">
         <div>
           <h5>Theme:</h5>
           <p>{theme}</p>
@@ -19,7 +19,7 @@ export default function Card({ name, theme, startingDate, Deadline, status }) {
         </div>
         <div>
           <h5>Status:</h5>
-          <p>{status}</p>
+          <p className={status === "Ongoing" ? "green" : ""}>{status}</p>
         </div>
       </div>
     </Template>
@@ -35,20 +35,27 @@ const Template = styled.div`
   display: grid;
   gap: 5px;
 
-  .content {
+  h4 {
+    margin-bottom: 1rem;
+  }
+
+  #info {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
   }
 
-  @media (max-width: 800px) { 
-    .content {
+  @media (max-width: 800px) {
+    #info {
       grid-template-columns: repeat(2, 1fr);
     }
   }
 
-  @media (max-width: 450px) { 
-    .content {
+  @media (max-width: 450px) {
+    #info {
       display: initial;
     }
+  }
+  .green {
+    color: green;
   }
 `;
