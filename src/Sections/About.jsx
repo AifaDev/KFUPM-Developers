@@ -5,7 +5,6 @@ export default function About() {
     <Container>
       <Header>
         <p>
-          {" "}
           This page has been created to host competitions and showcase students'
           projects.
         </p>
@@ -40,6 +39,8 @@ const Container = styled.div`
   height: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
   a {
     text-decoration: none;
