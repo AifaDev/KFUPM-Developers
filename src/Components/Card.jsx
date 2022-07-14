@@ -30,7 +30,7 @@ export default function Card({
         </div>
         <div>
           <h5>Status:</h5>
-          <p className={status === "Ongoing" ? "green" : "red"}>{status}</p>
+          <p className={status === "Ongoing" ? "green" : ""}>{status}</p>
         </div>
       </div>
     </Template>
@@ -84,9 +84,6 @@ const Template = styled.div`
   }
   .green {
     color: green;
-  }
-  .red {
-    color: red;
   }
   &:hover {
     box-shadow: inset 0 0 0 2px #e1e4e8;
