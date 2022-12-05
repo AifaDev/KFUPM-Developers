@@ -13,3 +13,6 @@ will contain iframes which each one of them would open a different particpant ap
 will contain any projects made by KFUPM Web Dev members.
 
 **About** will contain information about all the contributers to site plus general info.
+
+
+******Discontinued******
